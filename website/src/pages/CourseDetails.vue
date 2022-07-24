@@ -1,19 +1,20 @@
 <template>
-  <CourseBlueSection />
+  <div>
+    <CourseBlueSection />
 
-  <Container>
-    <div class="flex flex-col md:flex-row flex-col-reverse">
-      <div class="w-full md:w-2/3">
-        <WhatWillYouLearn />
+    <Container>
+      <div class="flex flex-col md:flex-row flex-col-reverse">
+        <div class="w-full md:w-2/3">
+          <WhatWillYouLearn />
 
-        <div class="w-full">
-          <h1 class="text-2xl font-bold mt-8 mb-4">Course content</h1>
+          <div class="w-full">
+            <h1 class="text-2xl font-bold mt-8 mb-4">Course content</h1>
 
-          <div class="flex justify-between mb-4">
-            <span>10 sections • 162 lectures • 10h 35m total length</span>
-            <Button label="Expand all sections" class="p-button-text" />
-          </div>
-          <Accordion>
+            <div class="flex justify-between mb-4">
+              <span>10 sections • 162 lectures • 10h 35m total length</span>
+              <Button label="Expand all sections" class="p-button-text" />
+            </div>
+            <Accordion>
               <AccordionTab v-for="heading of accordionHeaders" :key="heading">
                 <template #header>
                   <div class="flex justify-between items-center w-full">
@@ -29,51 +30,50 @@
                 dignissimos error. Non vel aspernatur ut vitae!
               </AccordionTab>
             </Accordion>
+          </div>
         </div>
-      </div>
 
-      <div class="w-full md:w-1/3">
-        <div class="md:pl-4">
-          <div class="shadow-lg border border-gray-300 p-4">
-            <h3 class="text-2xl font-bold mb-4">₹8,640</h3>
-            <Button label="Enroll Now" class="p-button-danger w-full" />
-            <div class="w-full">
-              <h2 class="text-lg font-bold mt-4">This course includes:</h2>
-              <ul class="w-full">
-                <li
-                  class="w-full"
-                  v-for="bullet of courseBulletPoints"
-                  :key="bullet.icon"
-                >
-                  <div class="flex align-center text-gray-500 p-2">
-                    <svg
-                      aria-hidden="true"
-                      focusable="false"
-                      class="h-4 w-4 mr-2"
-                    >
-                      <use :xlink:href="`#${bullet.icon}`" />
-                    </svg>
-                    <span class="text-sm leading-4">{{ bullet.text }}</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="flex justify-center my-4">
-              <Button label="Apply Coupons" class="p-button-text" />
+        <div class="w-full md:w-1/3">
+          <div class="md:pl-4">
+            <div class="shadow-lg border border-gray-300 p-4">
+              <h3 class="text-2xl font-bold mb-4">₹8,640</h3>
+              <Button label="Enroll Now" class="p-button-danger w-full" />
+              <div class="w-full">
+                <h2 class="text-lg font-bold mt-4">This course includes:</h2>
+                <ul class="w-full">
+                  <li
+                    class="w-full"
+                    v-for="bullet of courseBulletPoints"
+                    :key="bullet.icon"
+                  >
+                    <div class="flex align-center text-gray-500 p-2">
+                      <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        class="h-4 w-4 mr-2"
+                      >
+                        <use :xlink:href="`#${bullet.icon}`" />
+                      </svg>
+                      <span class="text-sm leading-4">{{ bullet.text }}</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="flex justify-center my-4">
+                <Button label="Apply Coupons" class="p-button-text" />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </Container>
+    </Container>
 
-  <StudentsFeedback />
+    <StudentsFeedback />
+  </div>
 </template>
 
 <script>
 import Container from "@/atoms/Container.vue";
-import BreadcrumbVue from "@/atoms/Breadcrumb.vue";
-import RatingVue from "@/atoms/Rating.vue";
 import CourseBlueSection from "@/molecules/CourseBlueSection.vue";
 import WhatWillYouLearn from "@/molecules/WhatWillYouLearn.vue";
 import StudentsFeedback from "@/templates/StudentsFeedback.vue";
@@ -88,11 +88,9 @@ export default {
     Container,
     Accordion,
     AccordionTab,
-    BreadcrumbVue,
     CourseBlueSection,
     WhatWillYouLearn,
     StudentsFeedback,
-    RatingVue,
   },
   data() {
     return {
