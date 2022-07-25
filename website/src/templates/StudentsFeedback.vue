@@ -63,8 +63,8 @@
         <span class="w-4" />
         <Button
           label="Download PDF"
-          class="p-button-primary"
-          icon="pi download"
+          class="p-button-info"
+          icon="pi pi-download"
           iconPos="left"
         />
       </div>
