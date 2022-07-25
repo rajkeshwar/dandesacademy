@@ -103,7 +103,7 @@ export default {
     banners() {
       return Array(4)
         .fill(null)
-        .map((_, i) => `images/dandes-academy-${i + 1}.jpeg`);
+        .map((_, i) => `/images/dandes-academy-${i + 1}.jpeg`);
     },
   },
   methods: {
