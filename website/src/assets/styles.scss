@@ -11,3 +11,10 @@
 body {
   background-color: #fafafa;
 }
+
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+  background-color: none !important;
+}

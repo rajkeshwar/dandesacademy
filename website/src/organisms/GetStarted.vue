@@ -13,7 +13,7 @@
       </h2>
       <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
         <div class="inline-flex rounded-md shadow">
-          <Button label="Get started" class="p-button-raised p-button-primary" />
+          <Button label="Get started" class="p-button-raised p-button-info" />
         </div>
         <div class="ml-3 inline-flex bg-white">
           <Button label="Learn more" class="p-button-raised p-button-text" />
