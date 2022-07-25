@@ -1,6 +1,6 @@
 // 1. Define route components.
 
-import { createRouter, createWebHistory } from "vue-router"
+import { createRouter, createWebHashHistory } from "vue-router"
 import Home from '@/pages/Home.vue';
 import Courses from '@/pages/Courses.vue';
 import CourseDetails from '@/pages/CourseDetails.vue';
@@ -24,6 +24,6 @@ const routes = [
 // You can pass in additional options here, but let's
 // keep it simple for now.
 export const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes, // short for `routes: routes`
 })
